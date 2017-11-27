@@ -7,7 +7,7 @@ const config = require('./config.js');
 
 app.use('/api/deploy', (req, res, next) => {
     try {
-        execSync(`sshpass -p ${config.port} ssh -o StrictHostKeyChecking=no root@${config.ip} './deploy.sh'`,
+        execSync(`sshpass -p ${config.password} ssh -o StrictHostKeyChecking=no root@${config.ip} './deploy.sh'`,
         (error, stdout, stderr) => {
             console.log(`${stdout}`);
             if (error !== null) {

@@ -1,4 +1,4 @@
 module.exports = {
-    port: process.env.PORT,
+    password: process.env.PASSWORD,
     ip: process.env.HOSTIP,
 };

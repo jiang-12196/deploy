@@ -2,10 +2,9 @@ FROM mhart/alpine-node:latest
 
 ADD ./ ./server
 
-
 WORKDIR /server
 
-VOLUME /data
+RUN apk update  && apk add sshpass && apk add openssh
 
 EXPOSE 5000
 
